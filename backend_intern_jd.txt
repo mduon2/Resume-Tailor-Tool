@@ -1,0 +1,22 @@
+Job Title: Backend Developer Intern (Summer 2026)
+Company: TechFlow Solutions
+Location: Ottawa, ON / Remote
+
+Role Description:
+We are looking for a Software Engineering student to join our backend team. You will help build scalable server-side applications and improve our internal tools.
+
+Key Responsibilities:
+- Develop new features using Java and the Spring Boot framework.
+- Write Python scripts to automate data processing and internal workflows.
+- Build and maintain RESTful APIs to connect our frontend and backend services.
+- Participate in code reviews using Git and GitHub.
+- Work with SQL databases to store and retrieve application data.
+- Ensure high code quality through unit testing and debugging.
+
+Required Skills:
+- Enrollment in a Computer Science or Software Engineering degree.
+- Proficiency in Java and Object-Oriented Programming (OOP).
+- Basic understanding of Data Structures and Algorithms.
+- Experience using Git for version control.
+- Familiarity with SQL or database concepts is a strong asset.
+- Knowledge of REST APIs or web services is a plus.
