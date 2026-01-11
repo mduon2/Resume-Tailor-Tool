@@ -4,9 +4,10 @@ from typing import Optional
 import PyPDF2
 from openai import OpenAI
 from dotenv import load_dotenv
+import re
 
 # Load environment variables from a .env file if present
-load_dotenv(override=True)
+load_dotenv(Path(__file__).parent / ".env", override=True)
 
 class PDFReader:
     """
@@ -22,6 +23,12 @@ class PDFReader:
 
         # Initialize the OpenAI client
         self.client = OpenAI(api_key=self.api_key)
+
+    def clean_text(self, text: str) -> str:
+        """Removes excessive whitespace and fixes common PDF extraction artifacts."""
+        # Replace multiple spaces/newlines with a single space/newline
+        text = re.sub(r'\s+', ' ', text)
+        return text.strip()
 
     def extract_text(self, file_path: str) -> str:
         """

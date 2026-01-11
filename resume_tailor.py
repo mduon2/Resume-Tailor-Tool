@@ -16,10 +16,9 @@ class ResumeTailor:
         Compares the resume against the job description to find skill gaps.
         """
         system_prompt = (
-            "You are a professional HR analyst specializing in ATS optimization. "
-            "Compare the candidate's resume against the job description. "
-            "Identify 5 to 8 specific keywords or skills missing from the resume. "
-            "Output only a bulleted list."
+            "You are a professional HR analyst. Compare the resume against the JD. "
+            "Identify 5 to 8 missing keywords. Group them into 'Technical Skills' "
+            "and 'Experience Gaps'. Output only the bulleted list."
         )
 
         user_prompt = (
