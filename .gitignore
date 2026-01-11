@@ -1,0 +1,12 @@
+#virtual envs
+resumeapp/
+
+__pycache__/
+
+#DB access and other security info
+*.env
+
+# --------------------
+# Flask / runtime data
+# --------------------
+flask_session/
