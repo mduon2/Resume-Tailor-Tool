@@ -30,3 +30,6 @@ finally:
         cursor.close()
     if connection is not None:
         connection.close()
+
+
+#Key format: resumes/{user_id}/{uuid}-{filename}
