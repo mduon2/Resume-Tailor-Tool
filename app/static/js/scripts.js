@@ -34,3 +34,36 @@ if (signup) {
         window.location.href = "/signup";
     });
 }
+
+const tailorForm = document.getElementById('tailor-form');
+
+if (tailorForm) {
+    tailorForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        const resume = document.getElementById('resume-upload').files[0];
+        const jd = document.getElementById('jd-upload').files[0];
+        
+        if(!resume || !jd) return alert("Please upload both files!");
+
+        const formData = new FormData();
+        formData.append('resume', resume);
+        formData.append('jd', jd);
+
+        // UI Feedback
+        const btn = tailorForm.querySelector('button');
+        btn.innerText = "Processing...";
+
+        const response = await fetch('/tailor', { method: 'POST', body: formData });
+        const result = await response.json();
+
+        if (result.success) {
+            document.getElementById('ai-results').style.display = 'block';
+            document.getElementById('display-summary').innerText = result.summary;
+            document.getElementById('display-analysis').innerText = result.analysis;
+        } else {
+            alert("Error: " + result.error);
+        }
+        btn.innerText = "Tailor Resume";
+    });
+}
