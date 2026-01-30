@@ -33,3 +33,9 @@ def signup():
 
 if __name__ == "__main__":
     app.run()
+
+from app.routes.routes import tailor_resume_routing
+
+@app.route("/tailor", methods=["POST"])
+def tailor():
+    return tailor_resume_routing()
