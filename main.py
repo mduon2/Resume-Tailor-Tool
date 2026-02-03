@@ -111,11 +111,11 @@ def main():
     )
 
     if args.output:
-        output_file = Path(args.output)
+        output_file = args.output or "resume_tailoring_report.md"  # Default filename
         try:
             with open(output_file, "w", encoding="utf-8") as file:
                 file.write(final_report)
-            print(f"Full report successfully saved to {args.output}")
+            print(f"Full report successfully saved to {output_file}")
         except Exception as e:
             print(f"Error saving file: {e}")
 
