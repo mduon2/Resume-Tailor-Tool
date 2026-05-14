@@ -1,10 +1,10 @@
 from copy import error
 import psycopg2
 
-db_host = 'database-2.cfucyeaqyye6.us-east-2.rds.amazonaws.com'
-db_name = 'dbresumatch'
-db_user = 'postgres'
-db_pass = 'Dev0g8resumatch'
+db_host = 
+db_name = 
+db_user = 
+db_pass = 
 connection = None
 cursor = None
 try:
